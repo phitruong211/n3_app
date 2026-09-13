@@ -37,6 +37,7 @@ class _MyAppState extends ConsumerState<MyApp> {
   Future<void> _initApp() async {
     final importer = ref.read(dataImporterProvider);
     await importer.importIfEmpty();
+    ref.invalidate(decksProvider);
   }
 
   @override

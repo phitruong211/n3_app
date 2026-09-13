@@ -109,7 +109,7 @@ class _DeckCard extends ConsumerWidget {
             ),
             const Spacer(),
             Text(
-              deckType.toUpperCase() + ' DECK',
+              '${deckType.toUpperCase()} DECK',
               style: const TextStyle(
                 fontSize: 10,
                 fontWeight: FontWeight.bold,
@@ -148,11 +148,12 @@ class _DeckCard extends ConsumerWidget {
                 );
               },
               loading: () => const LinearProgressIndicator(),
-              error: (_, __) => const SizedBox(),
+              error: (_, _) => const SizedBox(),
             ),
           ],
         ),
       ),
+    ),
     );
   }
 }
